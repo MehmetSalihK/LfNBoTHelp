@@ -56,7 +56,7 @@ Client.on("message", async (message) => {
 		.addField("Voire tu a combien de ping pour le bot", "-ping")
 		.addField("Va faire dire au bot quelque chose (ADMIN)", "-say [text]")
 		.addField("Va faire dire au bot une annonce et taguer tout le monde (ADMIN)", "-announcement [text]")
-		.addField("Voire les régles de ce serveur", "-régle")
+		.addField("Voire les régles de ce serveur", "-regle")
 		.addField("Voire les réseaux sociaux", "-bup")
 		.addField("Supprimer le chat (ADMIN)", "-clearchat")
 		.addField("Faire une raport a quelqu'un", "-raport");
@@ -72,8 +72,8 @@ Client.on("message", async (message) => {
 		.addField("Voire tu a combien de ping pour le bot", "-ping")
 		.addField("Va faire dire au bot quelque chose (ADMIN)", "-say [text]")
 		.addField("Va faire dire au bot une annonce et taguer tout le monde (ADMIN)", "-announcement [text]")
-		.addField("Voire les régles de ce serveur", "-régle")
-		.addField("Voire les réseaux sociaux", "-pub")
+		.addField("Voire les régles de ce serveur", "-regle")
+		.addField("Voire les réseaux sociaux", "-bup")
 		.addField("Supprimer le chat (ADMIN)", "-clearchat")
 		.addField("Faire une raport a quelqu'un", "-raport");
 		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
