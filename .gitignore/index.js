@@ -6,9 +6,11 @@ const prefix = "-"
 
 
 
-Client.on("ready", () => {
-	console.log("Help Commande Online ma geule!");
-	Client.user.setPresence({ game: { name: `LfNBoT, -help`, type: 0} });
+bot.on("ready", async () => {
+
+  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+  bot.user.setActivity("NDNG - Mehmet60", {type: "WATCHING"});
+
 });
 
 // welcome message
