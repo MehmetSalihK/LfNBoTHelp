@@ -4,15 +4,6 @@ const OwnerID = "130515926117253122";
 
 const prefix = "-"
 
-
-
-bot.on("ready", async () => {
-
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("NDNG - Mehmet60", {type: "WATCHING"});
-
-});
-
 // welcome message
 
 Client.on("guildMemberAdd", member => {
@@ -61,6 +52,7 @@ Client.on("message", async (message) => {
 		.addField("Voire les régles de ce serveur", "-regle")
 		.addField("Voire les réseaux sociaux", "-bup")
 		.addField("Supprimer le chat (ADMIN)", "-clearchat")
+		.addField("Pour la musique", "m!play [URL]")
 		.addField("Faire une raport a quelqu'un", "-raport");
 		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
 	}
@@ -77,6 +69,7 @@ Client.on("message", async (message) => {
 		.addField("Voire les régles de ce serveur", "-regle")
 		.addField("Voire les réseaux sociaux", "-bup")
 		.addField("Supprimer le chat (ADMIN)", "-clearchat")
+		.addField("Pour la musique", "m!play [URL]")
 		.addField("Faire une raport a quelqu'un", "-raport");
 		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
 	}
