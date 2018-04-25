@@ -40,11 +40,11 @@ Client.on("message", async (message) => {
 		message.channel.send({embed})
 	} else
 
-	if (command == "helppv") {
+	if (command == "helpadmin") {
 		message.delete (30);
 		const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
-		.setTitle("Liste de commandes:")
+		.setTitle("Liste de commandes: ADMIN")
 		.addField("Donnera la liste de commande actuelle", "-help")
 		.addField("Voire tu a combien de ping pour le bot", "-ping")
 		.addField("Voire les régles de ce serveur", "-regle")
