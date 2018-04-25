@@ -44,17 +44,20 @@ Client.on("message", async (message) => {
 		message.delete (30);
 		const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
-		.setTitle("Liste de commandes ADMIN:")
+		.setTitle("Liste de commandes:")
 		.addField("Donnera la liste de commande actuelle", "-help")
 		.addField("Voire tu a combien de ping pour le bot", "-ping")
-		.addField("Va faire dire au bot quelque chose (ADMIN)", "-say [text]")
-		.addField("Va faire dire au bot une annonce et taguer tout le monde (ADMIN)", "-announcement [text]")
 		.addField("Voire les régles de ce serveur", "-regle")
 		.addField("Voire les réseaux sociaux", "-bup")
-		.addField("Supprimer le chat (ADMIN)", "-clearchat")
+		.addField("Savoire tes info personnel", "-info")
 		.addField("Pour la musique", "m!play [URL]")
 		.addField("Faire une raport a quelqu'un", "-raport")
-		.addField("Savoire tes info personnel", "-info");
+		.addField("-------------------------------------------------")
+		.addField("----------------------ADMIN----------------------")
+		.addField("-------------------------------------------------")
+		.addField("Supprimer le chat (ADMIN)", "-clearchat")
+		.addField("Va faire dire au bot quelque chose (ADMIN)", "-say [text]")
+		.addField("Va faire dire au bot une annonce et taguer tout le monde (ADMIN)", "-announcement [text]");
 		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
 	}
 
@@ -62,17 +65,20 @@ Client.on("message", async (message) => {
 		message.delete (30);
 		const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
-		.setTitle("Liste de commandes ADMIN:")
+		.setTitle("Liste de commandes:")
 		.addField("Donnera la liste de commande actuelle", "-help")
 		.addField("Voire tu a combien de ping pour le bot", "-ping")
-		.addField("Va faire dire au bot quelque chose (ADMIN)", "-say [text]")
-		.addField("Va faire dire au bot une annonce et taguer tout le monde (ADMIN)", "-announcement [text]")
 		.addField("Voire les régles de ce serveur", "-regle")
 		.addField("Voire les réseaux sociaux", "-bup")
-		.addField("Supprimer le chat (ADMIN)", "-clearchat")
+		.addField("Savoire tes info personnel", "-info")
 		.addField("Pour la musique", "m!play [URL]")
 		.addField("Faire une raport a quelqu'un", "-raport")
-		.addField("Savoire tes info personnel", "-info");
+		.addField("-------------------------------------------------")
+		.addField("----------------------ADMIN----------------------")
+		.addField("-------------------------------------------------")
+		.addField("Supprimer le chat (ADMIN)", "-clearchat")
+		.addField("Va faire dire au bot quelque chose (ADMIN)", "-say [text]")
+		.addField("Va faire dire au bot une annonce et taguer tout le monde (ADMIN)", "-announcement [text]");
 		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
 	}
 
