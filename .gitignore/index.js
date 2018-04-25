@@ -53,7 +53,7 @@ Client.on("message", async (message) => {
 		.addField("Voire les réseaux sociaux", "-bup")
 		.addField("Supprimer le chat (ADMIN)", "-clearchat")
 		.addField("Pour la musique", "m!play [URL]")
-		.addField("Faire une raport a quelqu'un", "-raport");
+		.addField("Faire une raport a quelqu'un", "-raport")
 		.addField("Savoire tes info personnel", "-info");
 		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
 	}
@@ -71,7 +71,7 @@ Client.on("message", async (message) => {
 		.addField("Voire les réseaux sociaux", "-bup")
 		.addField("Supprimer le chat (ADMIN)", "-clearchat")
 		.addField("Pour la musique", "m!play [URL]")
-		.addField("Faire une raport a quelqu'un", "-raport");
+		.addField("Faire une raport a quelqu'un", "-raport")
 		.addField("Savoire tes info personnel", "-info");
 		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
 	}
