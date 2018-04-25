@@ -73,7 +73,7 @@ Client.on("message", async (message) => {
 		.addField("Savoire tes info personnel", "-info")
 		.addField("Pour la musique", "m!play [URL]")
 		.addField("Faire une raport a quelqu'un", "-raport")
-		.addField(ADMIN)
+		.addField("----------------------Liste de commandes:----------------------", "----------------------ADMIN----------------------")
 		.addField("Supprimer le chat (ADMIN)", "-clearchat")
 		.addField("Va faire dire au bot quelque chose (ADMIN)", "-say [text]")
 		.addField("Va faire dire au bot une annonce et taguer tout le monde (ADMIN)", "-announcement [text]");
