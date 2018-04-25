@@ -4,6 +4,13 @@ const OwnerID = "130515926117253122";
 
 const prefix = "-"
 
+bot.on("ready", async () => {
+
+	console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+	bot.user.setActivity("NDNG - Mehmet60", {type: "WATCHING"});
+  
+});
+
 // welcome message
 
 Client.on("guildMemberAdd", member => {
