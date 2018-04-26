@@ -6,15 +6,6 @@ const prefix = "-"
 
 // welcome message
 
-bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('438915157331017728').send('**' + member.user.username + '**, A Rejoint la familles NDNG!'); 
-});
-
-bot.on('guildMemberRemove', member => {
-    member.guild.channels.get('438922961165221898').send('**' + member.user.username + "**, A Quitter | n'est plus notre familles NDNG");
-    //
-});
-
 Client.on("guildMemberAdd", member => {
    member.guild.defaultChannel.send("Bienvenue à: " + member.guild.name + " J'espère que vous l'apprécierez ici")
 });
