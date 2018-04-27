@@ -84,7 +84,7 @@ Client.on("message", async (message) => {
 		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
 	}
 
-	if (command == "help") {
+	if (command == "aide") {
 		message.delete (30);
 		const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
@@ -100,6 +100,44 @@ Client.on("message", async (message) => {
 		.addField("Va faire dire au bot quelque chose (ADMIN)", "-say [text]")
 		.addField("Va faire dire au bot une annonce et taguer tout le monde (ADMIN)", "-announcement [text]");
 		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
+	}
+	
+	if (command == "help") {
+		message.delete (30);
+		const embed = new Discord.RichEmbed()
+  .setAuthor("[ADMIN]" + message.author.username + "[ADMIN]", "https://imgur.com/hd1v8Pr.png")
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x00ffff)
+  .setDescription("__***:heavy_check_mark::red_circle:BIENVENUE A NOTRE SERVEUR:red_circle::heavy_check_mark:***__")
+  .setFooter(" Pour la commande d'aide [-aide]", "https://imgur.com/rAgsGxu.png")
+  .setImage("https://imgur.com/StHMUDI.png")
+  .setThumbnail(message.author.avatarURL)
+  /*
+   * Takes a Date object, defaults to current date.
+   */
+  .setTimestamp()
+  .setURL("https://www.youtube.com/user/parislikuscu")
+  .addField("__```Invite lfnbot:```__",
+	"https://goo.gl/rwu1wK")
+  /*
+   * Inline fields may not display as inline if the thumbnail and/or image is too big.
+   */
+  .addField("__```Join server:```__", "https://goo.gl/gSGYa3", true)
+  /*
+   * Blank field, useful to create some space.
+   */
+		message.channel.send({embed}).then(d_msg => { d_msg.delete(9999); });
+	}
+
+	if (command == "role") {
+		message.delete (30);
+		const embed = new Discord.RichEmbed()
+		.addField(message.author.username, "Roles: " + message.member.roles.map(role => role.name).join(" || ")) // user, roles
+	   .setColor(0x00ffff)
+	   .setThumbnail(message.author.avatarURL)
+		message.channel.send({embed});
 	}
 
 });
