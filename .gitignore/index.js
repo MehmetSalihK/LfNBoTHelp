@@ -6,17 +6,18 @@ const prefix = "-"
 
 // welcome message
 
-Client.on("guildMemberAdd", member => {
-   member.guild.defaultChannel.send("Bienvenue à: " + member.guild.name + " J'espère que vous l'apprécierez ici")
-});
+bot.on("guildMemberAdd", member => {
+    member.guild.channels.find("name", "💾général💾").send(`"Bienvenue à: " + ${member.guild.name} + " J'espère que vous l'apprécierez ici"`)
+})
 
-Client.on("guildMemberRemove", member => {
-   member.guild.defaultChannel.send("Au revoir: " + member.user.username + " de " + member.guild.name)
-});
+bot.on("guildMemberRemove", member => {
+    member.guild.channels.find("name", "📉à-quitter📉").send(`Au revoir: " + ${member.user.username} + " de " + ${member.guild.name}`)
+})
 
-Client.on("guildCreate", guild => {
-	console.log("Quelqu'un a ajouté le bot de test à un serveur créé par: " + guild.owner.user.username)
-});
+bot.on('guildMemberAdd', member => {
+    var role = member.guild.roles.find("name", "✓NDNG✓");
+    member.addRole(role)
+})
 
 Client.on("message", async (message) => {
 	if (message.author.bot) return;
