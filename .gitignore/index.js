@@ -21,8 +21,8 @@ Client.on("message", async (message) => {
 	} else
 
 	if (command === "say") {
-	   if (message.member.hasPermission("ADMINISTRATOR"))
 		message.delete()
+	if (message.member.hasPermission("ADMINISTRATOR"))
         const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
 		.setDescription(message.author.username + " dit: " + args.join(" "));
