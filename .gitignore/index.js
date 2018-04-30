@@ -58,7 +58,11 @@ Client.on("message", async (message) => {
 
 	if (command == "helpadmin") {
 		message.delete (30);
+		var day = message.guild.createdAt.getDate()
+            var month = 1 + message.guild.createdAt.getMonth()
+            var year = message.guild.createdAt.getFullYear()
 		const embed = new Discord.RichEmbed()
+		.setFooter(` Pour la commande d'aide [-aide] • ${day}.${month}.${year} `, "https://imgur.com/rAgsGxu.png")
 		.setColor(0x954D23)
 		.setTitle("Liste de commandes: ADMIN")
 		.addField("Donnera la liste de commande actuelle", "-help")
@@ -77,6 +81,9 @@ Client.on("message", async (message) => {
 
 	if (command == "aide") {
 		message.delete (30);
+		var day = message.guild.createdAt.getDate()
+            var month = 1 + message.guild.createdAt.getMonth()
+            var year = message.guild.createdAt.getFullYear()
 		const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
 		.setTitle("Liste de commandes:")
