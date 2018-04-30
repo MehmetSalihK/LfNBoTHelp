@@ -26,14 +26,6 @@ Client.on("message", async (message) => {
 		.setColor(0x954D23)
 		.setDescription(message.author.username + " dit: " + args.join(" "));
 		message.channel.send({embed})
-	if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
-          message.channel.sendMessage("Désolé, vous n'avez pas la permission d'exécuter la commande \""+message.content+"\"");
-          console.log("Désolé, vous n'avez pas la permission d'exécuter la commande \""+message.content+"\"");
-          return;
-        } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
-          message.channel.sendMessage("Désolé, je n'ai pas la permission d'exécuter la commande \""+message.content+"\"");
-          console.log("Désolé, je n'ai pas la permission d'exécuter la commande \""+message.content+"\"");
-          return;
 	} else
 		
 	if (command === "cat") {
