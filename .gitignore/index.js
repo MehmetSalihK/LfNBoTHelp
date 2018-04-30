@@ -22,12 +22,13 @@ Client.on("message", async (message) => {
 
 	if (command === "say") {
 		message.delete()
-	if (message.member.hasPermission("ADMINISTRATOR"))
+	if (message.member.hasPermission("ADMINISTRATOR")) {
         const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
 		.setDescription(message.author.username + " dit: " + args.join(" "));
 		message.channel.send({embed})
-	} else
+	}
+   } else
 		
 	if (command === "cat") {
 	   const { body } = await superagent
